@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import NavBar from './components/NavBar'
+import { parseRoute } from './utils/strings'
+import ErrorPage from './components/ErrorPage'
 
-function App() {
+const APP_SPECS: string[] = [
+  'Our Mission',
+  'About Captain Zoya',
+  'FAQs',
+  'Contact Us',
+]
+
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <NavBar specs={APP_SPECS} />
+
+        <Routes>
+          <Route path="/" element={<>homepage</>} />
+
+          {APP_SPECS.map((e) => (
+            <Route path={parseRoute(e)} element={<>{e} page</>} key={e} />
+          ))}
+
+          <Route
+            path="*"
+            element={<ErrorPage status="404" statusText="Not Found" />}
+          />
+        </Routes>
+      </BrowserRouter>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

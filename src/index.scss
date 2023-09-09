@@ -1,0 +1,83 @@
+// CSS VARIABLES
+:root {
+  // colors
+  --gray-03: #f8f8f8;
+  --gray-05: #f4f4f4;
+  --gray-10: #eee;
+  --gray-20: #ccc;
+  --gray-30: #a0a0a0;
+  --gray-40: #8f8f8f;
+  --gray-50: #6c6c6c;
+  --gray-60: #595959;
+  --gray-70: #303030;
+  --gray-75: #202020;
+  --gray-80: #1e1e1e;
+  --gray-90: #121212;
+  //
+  --border-color: #e0e0e0;
+
+  // other
+  --nav-height: 6em;
+}
+
+[data-theme='light'] {
+  --color-primary-main: #ba7ab6;
+  --color-primary-dark: #9e5c9a;
+  --color-secondary-main: #4981ce;
+  //
+  --text-01: var(--gray-70);
+  --text-02: var(--gray-60);
+  --text-03: var(--gray-50);
+  --text-04: var(--gray-40);
+  //
+  --layer-00: white;
+  --layer-01: var(--gray-05);
+  --layer-02: var(--gray-10);
+  //
+  --border-complete: 1px solid var(--border-color);
+  //
+  --nav-link-color: var(--text-04);
+  --active-nav-link-color: var(--color-primary-dark);
+  //
+  --error-01: #ef5350;
+  --error-02: #d32f2f;
+  //
+  --hover-background-color: var(); // TODO: apply to hover items
+}
+
+* {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+  margin: 0;
+  // background-image: url('./assets/images/backgrounds/clouds.jpeg');
+}
+
+button {
+  border-radius: 0.5em;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  padding: 1em 1.5em;
+  font-size: 0.9em;
+}
+
+.btn-primary {
+  background-color: var(--color-primary-main);
+  color: white;
+
+  &:hover {
+    background-color: var(--color-primary-dark);
+  }
+}
+
+.btn-secondary {
+  background-color: var(--layer-00);
+  outline: 1px solid var(--color-secondary-main);
+  color: var(--color-secondary-main);
+
+  &:hover {
+    background-color: var(--layer-02);
+  }
+}
