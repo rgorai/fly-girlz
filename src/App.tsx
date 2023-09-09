@@ -5,7 +5,7 @@ import ErrorPage from './components/ErrorPage'
 
 const APP_SPECS: string[] = [
   'Our Mission',
-  'About Captian Zoya',
+  'About Captain Zoya',
   'FAQs',
   'Contact Us',
 ]

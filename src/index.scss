@@ -17,11 +17,12 @@
   --border-color: #e0e0e0;
 
   // other
-  --main-nav-height: 4em;
+  --nav-height: 6em;
 }
 
 [data-theme='light'] {
-  --color-primary-main: #d68bd1;
+  --color-primary-main: #ba7ab6;
+  --color-primary-dark: #9e5c9a;
   --color-secondary-main: #4981ce;
   //
   --text-01: var(--gray-70);
@@ -29,9 +30,11 @@
   --text-03: var(--gray-50);
   --text-04: var(--gray-40);
   //
+  --layer-00: white;
   --layer-01: var(--gray-05);
+  --layer-02: var(--gray-10);
   //
-  --border-completer: 1px solid var(--border-color);
+  --border-complete: 1px solid var(--border-color);
   //
   --nav-link-color: var(--text-04);
   --active-nav-link-color: var(--color-primary-dark);
@@ -39,9 +42,42 @@
   --error-01: #ef5350;
   --error-02: #d32f2f;
   //
-  --hover-background-color: red; // TODO: apply to hover items
+  --hover-background-color: var(); // TODO: apply to hover items
 }
 
 * {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+  margin: 0;
+  // background-image: url('./assets/images/backgrounds/clouds.jpeg');
+}
+
+button {
+  border-radius: 0.5em;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  padding: 1em 1.5em;
+  font-size: 0.9em;
+}
+
+.btn-primary {
+  background-color: var(--color-primary-main);
+  color: white;
+
+  &:hover {
+    background-color: var(--color-primary-dark);
+  }
+}
+
+.btn-secondary {
+  background-color: var(--layer-00);
+  outline: 1px solid var(--color-secondary-main);
+  color: var(--color-secondary-main);
+
+  &:hover {
+    background-color: var(--layer-02);
+  }
 }
