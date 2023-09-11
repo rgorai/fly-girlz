@@ -1,0 +1,48 @@
+@use '../mixins.scss' as *;
+
+.footerContainer {
+  @include flex-display(row, space-between);
+
+  width: 100%;
+  border-top: var(--border-complete);
+  padding: 1.5em 5vw 2em;
+  box-sizing: border-box;
+  background-color: var(--layer-00);
+
+  .socialLinks {
+    @include flex-display(row);
+
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      float: left;
+
+      & + li::before {
+        color: var(--color-primary-dark);
+        margin: 50em 0.5em 0 0.5em;
+        content: '\00b7';
+        font-weight: 800;
+      }
+    }
+  }
+
+  .plug {
+    display: inline-block;
+
+    a {
+      // @include flex-display(row);
+    }
+
+    .icon {
+      scale: 0.75;
+      margin-left: 0.2em;
+      stroke: var(--color-primary-dark);
+      stroke-width: 1px;
+      vertical-align: text-top;
+      font-size: 0.9em;
+      margin-top: 0.1em;
+    }
+  }
+}

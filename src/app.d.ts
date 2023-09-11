@@ -10,3 +10,10 @@ type ServerError = {
   statusText: string
   data?: string
 }
+
+type AppSpec = {
+  name: string
+  element: JSX.Element
+  navBar?: true
+  toolbar?: true
+}

@@ -14,7 +14,7 @@
     @include flex-display(column, flex-start, center);
 
     width: 100%;
-    padding-top: 18vh;
+    margin: 18vh 0 20vh;
     box-sizing: border-box;
 
     .errorStatus {
